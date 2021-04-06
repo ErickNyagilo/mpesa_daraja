@@ -30,7 +30,7 @@ def lipa_na_mpesa_online(request):
         "Amount": 1,
         "PartyA": 254707535013,
         "PartyB": LipanaMpesaPpassword.Business_short_code,
-        "PhoneNumber": 254791063211,
+        "PhoneNumber": 254707535013,
         "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
         "AccountReference": "Alex",
         "TransactionDesc": "Testing stk push"
