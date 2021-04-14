@@ -20,7 +20,9 @@ class MpesaAccessToken:
 
 class LipanaMpesaPpassword:
     lipa_time = datetime.now().strftime('%Y%m%d%H%M%S')
+    EndDate = "2020-08-21 10:10:000"
     Business_short_code = "174379"
+    OffSetValue = '0'
     passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
 
     data_to_encode = Business_short_code + passkey + lipa_time

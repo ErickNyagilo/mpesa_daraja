@@ -38,3 +38,17 @@ def lipa_na_mpesa_online(request):
 
     response = requests.post(api_url, json=request, headers=headers)
     return HttpResponse('success')
+
+def pull_transaction(request):
+    access_token = MpesaAccessToken.validated_mpesa_access_token
+    api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
+    headers = {"Authorization": "Bearer %s" % access_token}
+    request = {
+        "BusinessShortCode": LipanaMpesaPpassword.Business_short_code,
+        "Timestamp": LipanaMpesaPpassword.lipa_time,
+        "EndDate": LipanaMpesaPpassword.EndDate,
+        "OffSetValue": "0"
+    }
+
+    response = requests.post(api_url, json=request, headers=headers)
+    return HttpResponse('success')
