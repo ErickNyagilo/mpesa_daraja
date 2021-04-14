@@ -38,7 +38,7 @@ def lipa_na_mpesa_online(request):
 
     response = requests.post(api_url, json=request, headers=headers)
     return HttpResponse('success')
-
+'''
 def pull_transaction(request):
     access_token = MpesaAccessToken.validated_mpesa_access_token
     api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
@@ -52,3 +52,4 @@ def pull_transaction(request):
 
     response = requests.post(api_url, json=request, headers=headers)
     return HttpResponse('success')
+'''
